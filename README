@@ -1,0 +1,54 @@
+Name
+    File::UnixAuth - Result source definitions for the Unix authentication
+    files
+
+Version
+    0.16.$Revision: 3 $
+
+Synopsis
+       use File::UnixAuth;
+
+       my $unixauth_ref = File::UnixAuth->new( $unixauth_attributes );
+
+Description
+    Extends File::DataClass::Schema. Provides for the reading and writing of
+    the the Unix /etc/group, /etc/passwd, and /etc/shadow files.
+
+Configuration and Environment
+    Defines these attributes:
+
+    "source_name"
+       A required string. Selects the required result source. Set to one of;
+       "group", "passwd", or "shadow"
+
+Subroutines/Methods
+    None
+
+Diagnostics
+    None
+
+Dependencies
+    File::DataClass::Schema
+    File::UnixAuth::Result
+    Moose
+
+Incompatibilities
+    There are no known incompatibilities in this module
+
+Bugs and Limitations
+    There are no known bugs in this module. Please report problems to the
+    address below. Patches are welcome
+
+Author
+    Peter Flanigan, "<pjfl@cpan.org>"
+
+License and Copyright
+    Copyright (c) 2013 Peter Flanigan. All rights reserved
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself. See perlartistic
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT WARRANTY; without even the implied warranty of MERCHANTABILITY
+    or FITNESS FOR A PARTICULAR PURPOSE
+

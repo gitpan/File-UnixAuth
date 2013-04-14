@@ -1,0 +1,51 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.66.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 0e85652957e624086e67c5abf06cdb35fcb9e7dd Build.PL
+SHA1 a4066d60f5b8c04207c19ce12c77f678ad5e1b3e Changes
+SHA1 2b3ccb88f716f614f8af721a1c69dba0bcdbbb32 LICENSE
+SHA1 b055fdfd1154ceb89fed28e5c4e5f7415fa5f312 MANIFEST
+SHA1 eea5117056be262746762c7b363704adec2ddaad META.json
+SHA1 df50a56075efc7fbb7340e26cf2cf351e5eb9a67 META.yml
+SHA1 3de190624ebfd5039321c238f233b28bb442a400 README
+SHA1 4efd622830066cf222e8f2542024a7fed26666a2 inc/Bob.pm
+SHA1 b2daf2d6d3f2158b33d84a79ea725c922f508718 inc/CPANTesting.pm
+SHA1 32d0d60cba78d86b9c2cc6ce3b511c0fbe6e0b91 inc/SubClass.pm
+SHA1 f5bc61852263df0db5f3be3487af42657bddc8de lib/File/UnixAuth.pm
+SHA1 3ad048b760667d817ce12f8510df7c6847f5b4b3 lib/File/UnixAuth/Result.pm
+SHA1 c00343253b33a0a65aed2b797866d8159e38e059 lib/File/UnixAuth/Storage.pm
+SHA1 5b418179c13d5f6c7995c9021ec067a20cab70dc t/01always_pass.t
+SHA1 c2a88ab40c9c38cd8d0cba598a1a75af7465c490 t/02pod.t
+SHA1 d7477d8a429615ca51cfdfc21dfb9e5e6b3aac70 t/03podcoverage.t
+SHA1 6c49c5b022fe4d20fa3931084848e4155a76303d t/04critic.t
+SHA1 53a85a71ca5e6d2be2e9e4f1eb3ddd5e4b19ba54 t/05kwalitee.t
+SHA1 b5fc0653fdf5fa2dfd820c12f33372f9a0b6bdbe t/06yaml.t
+SHA1 701e1ede70a32634275c9a55ca3fad0be58960b8 t/07podspelling.t
+SHA1 56a98c1d6d96ab3494732938c8b402f16c05916d t/10test_script.t
+SHA1 00aa2e48a788f7ec7de8365693f0ba278f86c98c t/critic.rc
+SHA1 f14e8f65e7700939e4ed73a797532bc63897ff7e t/passwd
+SHA1 ac6595e15a7e0484708ab0575883f016ad53025b t/shadow
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.10 (GNU/Linux)
+
+iQEcBAEBAgAGBQJRatW+AAoJEK492j4Im1Bpx2wIAJs8wcAhDdMSGFNRJ8N411+u
+W1X5CTLE5f0hXxGzOzNTx/QVwc9vI/dAcmzjIduxHHFzim85K2kpBXpjWj1AzzhD
+rtkj4nps9ypQeT7BodRmmtsejZ06nw3qoZwEyaH1Rb7xXxkhbO7pTPXygxq/hDPa
+eBbcK4QOkHL1mi46d6TkkV5gizUMc427WWnKri+46mUWff/dhRlJanpIORE5BivE
+/rHwA92cDv11iYVRghJ2lnHMjQ8HDYzwSDVBwgBMd0hdueurPbZ3BjbqvJH92btT
+jPo8fHE/JjvnEkFyj0rnwyjK1sMCB47lupVle7LgKXtUQqo7jPhgD3WGCnAW88o=
+=M8TR
+-----END PGP SIGNATURE-----
