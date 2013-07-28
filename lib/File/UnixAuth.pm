@@ -1,19 +1,20 @@
-# @(#)$Ident: UnixAuth.pm 2013-04-14 16:04 pjf ;
+# @(#)$Ident: UnixAuth.pm 2013-07-28 18:10 pjf ;
 
 package File::UnixAuth;
 
-use strict;
-use namespace::autoclean;
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 3 $ =~ /\d+/gmx );
+use 5.01;
+use namespace::sweep;
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 2 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
+use File::DataClass::Types  qw( Str );
 use File::UnixAuth::Result;
-use Moose;
+use Moo;
 
-extends qw(File::DataClass::Schema);
+extends q(File::DataClass::Schema);
 
 has '+result_source_attributes' =>
-   default                => sub { return {
+   default                => sub { {
       group               => {
          attributes       => [ qw(password gid members) ],
          defaults         => { password => q(x) },
@@ -31,11 +32,12 @@ has '+result_source_attributes' =>
                                pwnext   => 0,    pwafter   => 99_999,
                                pwwarn   => 7,    pwexpires => 90,
                                reserved => NUL }, }, } };
-has '+storage_attributes' =>
-   default                => sub { return { backup => q(.bak), } };
-has '+storage_class'      =>
-   default                => q(+File::UnixAuth::Storage);
-has 'source_name'         => is => 'ro', isa => 'Str', required => TRUE;
+
+has '+storage_attributes' => default => sub { { backup => '.bak', } };
+
+has '+storage_class'      => default => '+File::UnixAuth::Storage';
+
+has 'source_name'         => is => 'ro', isa => Str, required => TRUE;
 
 around 'source' => sub {
    my ($orig, $self) = @_; return $self->$orig( $self->source_name );
@@ -57,7 +59,7 @@ File::UnixAuth - Result source definitions for the Unix authentication files
 
 =head1 Version
 
-0.16.$Revision: 3 $
+0.16.$Rev: 2 $
 
 =head1 Synopsis
 
@@ -77,10 +79,28 @@ Defines these attributes:
 
 =over 3
 
+=item C<result_source_attributes>
+
+Defines the result sources and their attributes
+
 =item C<source_name>
 
 A required string. Selects the required result source. Set to one of;
 C<group>, C<passwd>, or C<shadow>
+
+=item C<storage_attributes>
+
+Change the defaults to create a backup file with a F<.bak> extension
+
+=back
+
+Modifies these methods;
+
+=over 3
+
+=item C<resultset>
+
+=item C<source>
 
 =back
 
@@ -100,7 +120,7 @@ None
 
 =item L<File::UnixAuth::Result>
 
-=item L<Moose>
+=item L<Moo>
 
 =back
 

@@ -3,7 +3,7 @@ Name
     files
 
 Version
-    0.16.$Revision: 3 $
+    0.16.$Rev: 2 $
 
 Synopsis
        use File::UnixAuth;
@@ -17,9 +17,20 @@ Description
 Configuration and Environment
     Defines these attributes:
 
+    "result_source_attributes"
+       Defines the result sources and their attributes
+
     "source_name"
        A required string. Selects the required result source. Set to one of;
        "group", "passwd", or "shadow"
+
+    "storage_attributes"
+       Change the defaults to create a backup file with a .bak extension
+
+    Modifies these methods;
+
+    "resultset"
+    "source"
 
 Subroutines/Methods
     None
@@ -30,7 +41,7 @@ Diagnostics
 Dependencies
     File::DataClass::Schema
     File::UnixAuth::Result
-    Moose
+    Moo
 
 Incompatibilities
     There are no known incompatibilities in this module

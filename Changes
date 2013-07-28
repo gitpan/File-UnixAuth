@@ -1,9 +1,13 @@
 Revision history for File::UnixAuth
 
+0.17.2    2013-07-28 19:11:33
+          - Bumped dependency on File::DataClass
+          - Mooified
+
 0.16.3    2013-04-14 17:13:40
-          Updated POD
-          Extracted code and tests from File::DataClass
+          - Updated POD
+          - Extracted code and tests from File::DataClass
 
 0.1.1     2013-04-11 16:39:39
-          Created initial project files
+          - Created initial project files
 

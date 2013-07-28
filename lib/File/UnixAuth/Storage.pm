@@ -1,14 +1,14 @@
-# @(#)$Ident: Storage.pm 2013-04-14 16:09 pjf ;
+# @(#)$Ident: Storage.pm 2013-06-22 01:26 pjf ;
 
 package File::UnixAuth::Storage;
 
-use strict;
-use namespace::autoclean;
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 3 $ =~ /\d+/gmx );
+use namespace::sweep;
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
 use Lingua::EN::NameParse;
-use Moose;
+use Moo;
+use MooX::Augment -class;
 
 extends q(File::DataClass::Storage);
 
@@ -30,7 +30,6 @@ augment '_write_file' => sub {
 };
 
 # Private methods
-
 sub _deflate {
    my ($self, $hash, $id) = @_; my $attr = $hash->{ $id };
 
@@ -125,7 +124,6 @@ sub _write_filter {
 }
 
 # Private subroutines
-
 sub __original_order {
    my ($hash, $lhs, $rhs) = @_;
 
@@ -134,10 +132,6 @@ sub __original_order {
    exists $hash->{ $rhs }->{_order_by} or return -1;
    return $hash->{ $lhs }->{_order_by} <=> $hash->{ $rhs }->{_order_by};
 }
-
-__PACKAGE__->meta->make_immutable;
-
-no Moose;
 
 1;
 
@@ -151,7 +145,7 @@ File::UnixAuth::Storage - Unix authentication and authorisation file storage
 
 =head1 Version
 
-0.16.$Revision: 3 $
+0.16.$Rev: 1 $
 
 =head1 Synopsis
 
@@ -170,6 +164,8 @@ File::UnixAuth::Storage - Unix authentication and authorisation file storage
 =over 3
 
 =item L<File::DataClass::Storage>
+
+=item L<MooX::Augment>
 
 =back
 

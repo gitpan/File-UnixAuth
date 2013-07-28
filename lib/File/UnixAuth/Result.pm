@@ -1,16 +1,15 @@
-# @(#)$Ident: Result.pm 2013-04-14 16:09 pjf ;
+# @(#)$Ident: Result.pm 2013-06-22 01:19 pjf ;
 
 package File::UnixAuth::Result;
 
-use strict;
-use namespace::autoclean;
-use version; our $VERSION = qv( sprintf '0.16.%d', q$Rev: 3 $ =~ /\d+/gmx );
+use namespace::sweep;
+use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
-use File::DataClass::Functions qw(is_member);
-use Moose;
+use File::DataClass::Functions qw( is_member );
+use Moo;
 
-extends qw(File::DataClass::Result);
+extends q(File::DataClass::Result);
 
 sub add_user_to_group {
    my ($self, $user) = @_; my $users = $self->members;
@@ -32,8 +31,6 @@ sub remove_user_from_group {
    return $self->update;
 }
 
-no Moose;
-
 1;
 
 __END__
@@ -46,7 +43,7 @@ File::UnixAuth::Result - Unix authentication and authorisation file custom resul
 
 =head1 Version
 
-0.16.$Revision: 3 $
+0.16.$Rev: 1 $
 
 =head1 Synopsis
 
