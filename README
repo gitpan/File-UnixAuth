@@ -3,7 +3,7 @@ Name
     files
 
 Version
-    0.16.$Rev: 3 $
+    0.16.$Rev: 4 $
 
 Synopsis
        use File::UnixAuth;
