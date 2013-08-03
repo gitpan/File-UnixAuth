@@ -1,5 +1,8 @@
 Revision history for File::UnixAuth
 
+0.18.1    2013-08-03 22:08:26
+          - Updated POD
+
 0.17.5    2013-08-03 15:35:19
           - Reverted min Perl ver testing in toolchain
           - New method for CPANTesting min Perl ver

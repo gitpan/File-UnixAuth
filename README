@@ -3,7 +3,7 @@ Name
     files
 
 Version
-    0.16.$Rev: 5 $
+    Describes version 0.16.$Rev: 1 $ of File::UnixAuth
 
 Synopsis
        use File::UnixAuth;
@@ -14,8 +14,12 @@ Description
     Extends File::DataClass::Schema. Provides for the reading and writing of
     the the Unix /etc/group, /etc/passwd, and /etc/shadow files.
 
+    Since these files share a common format they all use the the same
+    storage class File::UnixAuth::Storage. Defines three result sources;
+    "group", "passwd", and "shadow"
+
 Configuration and Environment
-    Defines these attributes:
+    Defines these attributes;
 
     "result_source_attributes"
        Defines the result sources and their attributes

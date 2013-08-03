@@ -51,15 +51,15 @@
    "provides" : {
       "File::UnixAuth" : {
          "file" : "lib/File/UnixAuth.pm",
-         "version" : "v0.17.5"
+         "version" : "v0.18.1"
       },
       "File::UnixAuth::Result" : {
          "file" : "lib/File/UnixAuth/Result.pm",
-         "version" : "v0.17.1"
+         "version" : "v0.18.1"
       },
       "File::UnixAuth::Storage" : {
          "file" : "lib/File/UnixAuth/Storage.pm",
-         "version" : "v0.17.1"
+         "version" : "v0.18.1"
       }
    },
    "release_status" : "stable",
@@ -72,5 +72,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.17.5"
+   "version" : "v0.18.1"
 }

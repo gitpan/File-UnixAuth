@@ -1,10 +1,10 @@
-# @(#)$Ident: UnixAuth.pm 2013-08-03 14:32 pjf ;
+# @(#)$Ident: UnixAuth.pm 2013-08-03 21:07 pjf ;
 
 package File::UnixAuth;
 
 use 5.01;
 use namespace::sweep;
-use version; our $VERSION = qv( sprintf '0.17.%d', q$Rev: 5 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.18.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
 use File::DataClass::Types  qw( Str );
@@ -16,19 +16,19 @@ extends q(File::DataClass::Schema);
 has '+result_source_attributes' =>
    default                => sub { {
       group               => {
-         attributes       => [ qw(password gid members) ],
-         defaults         => { password => q(x) },
+         attributes       => [ qw( password gid members ) ],
+         defaults         => { password => 'x' },
          resultset_attributes => {
-            result_class  => q(File::UnixAuth::Result), }, },
+            result_class  => 'File::UnixAuth::Result', }, },
       passwd              => {
-         attributes       => [ qw(password id pgid gecos homedir shell
-                                  first_name last_name location work_phone
-                                  home_phone) ],
-         defaults         => { password => q(x) }, },
+         attributes       => [ qw( password id pgid gecos homedir shell
+                                   first_name last_name location work_phone
+                                   home_phone ) ],
+         defaults         => { password => 'x' }, },
       shadow              => {
-         attributes       => [ qw(password pwlast pwnext pwafter
-                                  pwwarn pwexpires pwdisable reserved) ],
-         defaults         => { password => q(*), pwlast    => 0,
+         attributes       => [ qw( password pwlast pwnext pwafter
+                                   pwwarn pwexpires pwdisable reserved ) ],
+         defaults         => { password => '*',  pwlast    => 0,
                                pwnext   => 0,    pwafter   => 99_999,
                                pwwarn   => 7,    pwexpires => 90,
                                reserved => NUL }, }, } };
@@ -59,7 +59,7 @@ File::UnixAuth - Result source definitions for the Unix authentication files
 
 =head1 Version
 
-0.16.$Rev: 5 $
+Describes version 0.16.$Rev: 1 $ of L<File::UnixAuth>
 
 =head1 Synopsis
 
@@ -73,9 +73,13 @@ Extends L<File::DataClass::Schema>. Provides for the reading and
 writing of the the Unix F</etc/group>, F</etc/passwd>, and
 F</etc/shadow> files.
 
+Since these files share a common format they all use the the same
+storage class L<File::UnixAuth::Storage>. Defines three result
+sources; C<group>, C<passwd>, and C<shadow>
+
 =head1 Configuration and Environment
 
-Defines these attributes:
+Defines these attributes;
 
 =over 3
 
