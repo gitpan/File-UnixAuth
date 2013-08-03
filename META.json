@@ -51,7 +51,7 @@
    "provides" : {
       "File::UnixAuth" : {
          "file" : "lib/File/UnixAuth.pm",
-         "version" : "v0.17.4"
+         "version" : "v0.17.5"
       },
       "File::UnixAuth::Result" : {
          "file" : "lib/File/UnixAuth/Result.pm",
@@ -72,5 +72,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.17.4"
+   "version" : "v0.17.5"
 }
