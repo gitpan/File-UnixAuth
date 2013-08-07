@@ -3,7 +3,7 @@ Name
     files
 
 Version
-    Describes version 0.16.$Rev: 2 $ of File::UnixAuth
+    Describes version 0.16.$Rev: 3 $ of File::UnixAuth
 
 Synopsis
        use File::UnixAuth;
