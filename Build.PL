@@ -1,15 +1,15 @@
-# @(#)$Ident: Build.PL 2013-07-28 18:10 pjf ;
+# @(#)$Ident: Build.PL 2013-08-07 00:36 pjf ;
 
 use strict;
 use warnings;
 use inc::Bob; # Module::Build subclass
-use version; our $VERSION = qv( sprintf '0.18.%d', q$Rev: 1 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.18.%d', q$Rev: 2 $ =~ /\d+/gmx );
 
 Bob->new( {
    module    => 'File::UnixAuth',
    home_page => 'http://www.roxsoft.co.uk',
    requires  => {
-      'perl'                  => 5.01,
+      'perl'                  => 5.010001,
       'namespace::sweep'      => 0.006,
       'Class::Method::ModifiersX::Augment' => 0.001,
       'File::DataClass'       => q(0.22.0),

@@ -44,14 +44,14 @@
             "Lingua::EN::NameParse" : "1.28",
             "Moo" : "1.002",
             "namespace::sweep" : "0.006",
-            "perl" : "5.01"
+            "perl" : "5.010001"
          }
       }
    },
    "provides" : {
       "File::UnixAuth" : {
          "file" : "lib/File/UnixAuth.pm",
-         "version" : "v0.18.1"
+         "version" : "v0.18.2"
       },
       "File::UnixAuth::Result" : {
          "file" : "lib/File/UnixAuth/Result.pm",
@@ -72,5 +72,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.18.1"
+   "version" : "v0.18.2"
 }
