@@ -1,10 +1,10 @@
-# @(#)$Ident: UnixAuth.pm 2013-08-07 17:23 pjf ;
+# @(#)$Ident: UnixAuth.pm 2013-08-15 18:28 pjf ;
 
 package File::UnixAuth;
 
 use 5.010001;
 use namespace::sweep;
-use version; our $VERSION = qv( sprintf '0.18.%d', q$Rev: 3 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.19.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 use File::DataClass::Constants;
 use File::DataClass::Types  qw( Str );
@@ -55,11 +55,11 @@ __END__
 
 =head1 Name
 
-File::UnixAuth - Result source definitions for the Unix authentication files
+File::UnixAuth - Domain model for the Unix authentication files
 
 =head1 Version
 
-Describes version 0.16.$Rev: 3 $ of L<File::UnixAuth>
+Describes version 0.16.$Rev: 1 $ of L<File::UnixAuth>
 
 =head1 Synopsis
 

@@ -1,5 +1,8 @@
 Revision history for File::UnixAuth
 
+0.19.1    2013-08-15 19:39:58
+          - Switched to Dist::Zilla
+
 0.18.3    2013-08-07 18:23:12
           - Reset min perl testing to original behaviour
           - Raised minimum Perl version to v5.10.1

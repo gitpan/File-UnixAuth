@@ -1,8 +1,8 @@
-# @(#)$Ident: 10test_script.t 2013-08-03 21:00 pjf ;
+# @(#)$Ident: 10test_script.t 2013-08-15 18:33 pjf ;
 
 use strict;
 use warnings;
-use version; our $VERSION = qv( sprintf '0.18.%d', q$Rev: 1 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.19.%d', q$Rev: 1 $ =~ /\d+/gmx );
 use File::Spec::Functions   qw( catdir catfile updir );
 use FindBin                 qw( $Bin );
 use lib                 catdir( $Bin, updir, 'lib' );
@@ -10,20 +10,18 @@ use lib                 catdir( $Bin, updir, 'lib' );
 use Module::Build;
 use Test::More;
 
-my $reason;
+my $notes = {};
 
 BEGIN {
    my $builder = eval { Module::Build->current };
-
-   $builder and $reason = $builder->notes->{stop_tests};
-   $reason  and $reason =~ m{ \A TESTS: }mx and plan skip_all => $reason;
+      $builder and $notes = $builder->notes;
 }
 
 use English qw( -no_match_vars );
 use File::DataClass::IO;
 use Text::Diff;
 
-use_ok( 'File::UnixAuth' );
+use_ok 'File::UnixAuth';
 
 my $args   = { path        => catfile( qw( t shadow ) ),
                source_name => 'shadow',

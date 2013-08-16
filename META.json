@@ -1,10 +1,10 @@
 {
-   "abstract" : "Result source definitions for the Unix authentication files",
+   "abstract" : "Domain model for the Unix authentication files",
    "author" : [
-      "Peter Flanigan, C<< <pjfl@cpan.org> >>"
+      "Peter Flanigan <pjfl@cpan.org>"
    ],
-   "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4004, CPAN::Meta::Converter version 2.120921",
+   "dynamic_config" : "1",
+   "generated_by" : "Dist::Zilla version 4.300033, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -35,9 +35,6 @@
          }
       },
       "runtime" : {
-         "recommends" : {
-            "App::cpanminus" : "1.6005"
-         },
          "requires" : {
             "Class::Method::ModifiersX::Augment" : "0.001",
             "File::DataClass" : "v0.22.0",
@@ -51,26 +48,28 @@
    "provides" : {
       "File::UnixAuth" : {
          "file" : "lib/File/UnixAuth.pm",
-         "version" : "v0.18.3"
+         "version" : "v0.19.1"
       },
       "File::UnixAuth::Result" : {
          "file" : "lib/File/UnixAuth/Result.pm",
-         "version" : "v0.18.1"
+         "version" : "v0.19.1"
       },
       "File::UnixAuth::Storage" : {
          "file" : "lib/File/UnixAuth/Storage.pm",
-         "version" : "v0.18.1"
+         "version" : "v0.19.1"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
+         "mailto" : "bug-File-UnixAuth@rt.cpan.org",
          "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=File-UnixAuth"
       },
-      "homepage" : "http://www.roxsoft.co.uk",
+      "homepage" : "https://metacpan.org/author/PJFL",
       "license" : [
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v0.18.3"
+   "version" : "0.19.1"
 }
+
