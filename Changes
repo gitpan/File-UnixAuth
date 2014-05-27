@@ -1,5 +1,9 @@
 Revision history for File::UnixAuth
 
+0.20.1    2014-05-27 19:29:19
+          - Removed Ident and VERSION lines
+          - Updated toolchain
+
 0.19.1    2013-08-15 19:39:58
           - Switched to Dist::Zilla
 
@@ -7,21 +11,3 @@ Revision history for File::UnixAuth
           - Reset min perl testing to original behaviour
           - Raised minimum Perl version to v5.10.1
           - Updated POD
-
-0.17.5    2013-08-03 15:35:19
-          - Reverted min Perl ver testing in toolchain
-          - New method for CPANTesting min Perl ver
-          - Added fremen and frogman to tier gruber
-          - Aborting Bingoes failed see df276fba-f57c-11e2-8c80-50d7c5c10595
-            No choice but to send this smoker to sleep 10 while 1.
-            Chris Williams, put my pause id in your stop list
-          - Bumped dependency on File::DataClass
-          - Mooified
-
-0.16.3    2013-04-14 17:13:40
-          - Updated POD
-          - Extracted code and tests from File::DataClass
-
-0.1.1     2013-04-11 16:39:39
-          - Created initial project files
-

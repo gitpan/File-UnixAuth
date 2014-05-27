@@ -1,15 +1,13 @@
-# @(#)$Ident: UnixAuth.pm 2013-08-15 18:28 pjf ;
-
 package File::UnixAuth;
 
 use 5.010001;
 use namespace::sweep;
-use version; our $VERSION = qv( sprintf '0.19.%d', q$Rev: 1 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.20.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
+use Moo;
 use File::DataClass::Constants;
 use File::DataClass::Types  qw( Str );
 use File::UnixAuth::Result;
-use Moo;
 
 extends q(File::DataClass::Schema);
 
@@ -55,11 +53,11 @@ __END__
 
 =head1 Name
 
-File::UnixAuth - Domain model for the Unix authentication files
+File::UnixAuth - Read and write the Unix authentication files
 
 =head1 Version
 
-Describes version 0.16.$Rev: 1 $ of L<File::UnixAuth>
+Describes version 0.20.$Rev: 1 $ of L<File::UnixAuth>
 
 =head1 Synopsis
 
@@ -144,7 +142,7 @@ Peter Flanigan, C<< <pjfl@cpan.org> >>
 
 =head1 License and Copyright
 
-Copyright (c) 2013 Peter Flanigan. All rights reserved
+Copyright (c) 2014 Peter Flanigan. All rights reserved
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself. See L<perlartistic>

@@ -1,14 +1,11 @@
-# @(#)$Ident: Storage.pm 2013-06-22 01:26 pjf ;
-
 package File::UnixAuth::Storage;
 
 use namespace::sweep;
-use version; our $VERSION = qv( sprintf '0.19.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
-use File::DataClass::Constants;
-use Lingua::EN::NameParse;
 use Moo;
 use MooX::Augment -class;
+use File::DataClass::Constants;
+use Lingua::EN::NameParse;
 
 extends q(File::DataClass::Storage);
 
@@ -143,10 +140,6 @@ __END__
 
 File::UnixAuth::Storage - Unix authentication and authorisation file storage
 
-=head1 Version
-
-0.16.$Rev: 1 $
-
 =head1 Synopsis
 
    use File::UnixAuth::Storage;
@@ -185,7 +178,7 @@ Peter Flanigan, C<< <Support at RoxSoft.co.uk> >>
 
 =head1 License and Copyright
 
-Copyright (c) 2013 Peter Flanigan. All rights reserved
+Copyright (c) 2014 Peter Flanigan. All rights reserved
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself. See L<perlartistic>

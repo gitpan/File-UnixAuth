@@ -1,10 +1,10 @@
 {
-   "abstract" : "Domain model for the Unix authentication files",
+   "abstract" : "Read and write the Unix authentication files",
    "author" : [
-      "Peter Flanigan <pjfl@cpan.org>"
+      "Peter Flanigan, C<< <pjfl@cpan.org> >>"
    ],
-   "dynamic_config" : "1",
-   "generated_by" : "Dist::Zilla version 4.300033, CPAN::Meta::Converter version 2.120921",
+   "dynamic_config" : 1,
+   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.141170",
    "license" : [
       "perl_5"
    ],
@@ -37,9 +37,9 @@
       "runtime" : {
          "requires" : {
             "Class::Method::ModifiersX::Augment" : "0.001",
-            "File::DataClass" : "v0.22.0",
+            "File::DataClass" : "v0.40.0",
             "Lingua::EN::NameParse" : "1.28",
-            "Moo" : "1.002",
+            "Moo" : "1.004002",
             "namespace::sweep" : "0.006",
             "perl" : "5.010001"
          }
@@ -48,15 +48,15 @@
    "provides" : {
       "File::UnixAuth" : {
          "file" : "lib/File/UnixAuth.pm",
-         "version" : "v0.19.1"
+         "version" : "v0.20.1"
       },
       "File::UnixAuth::Result" : {
          "file" : "lib/File/UnixAuth/Result.pm",
-         "version" : "v0.19.1"
+         "version" : "v0.20.1"
       },
       "File::UnixAuth::Storage" : {
          "file" : "lib/File/UnixAuth/Storage.pm",
-         "version" : "v0.19.1"
+         "version" : "v0.20.1"
       }
    },
    "release_status" : "stable",
@@ -70,6 +70,6 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.19.1"
+   "version" : "0.20.1"
 }
 

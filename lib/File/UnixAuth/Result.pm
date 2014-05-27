@@ -1,13 +1,10 @@
-# @(#)$Ident: Result.pm 2013-06-22 01:19 pjf ;
-
 package File::UnixAuth::Result;
 
 use namespace::sweep;
-use version; our $VERSION = qv( sprintf '0.19.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
+use Moo;
 use File::DataClass::Constants;
 use File::DataClass::Functions qw( is_member );
-use Moo;
 
 extends q(File::DataClass::Result);
 
@@ -41,10 +38,6 @@ __END__
 
 File::UnixAuth::Result - Unix authentication and authorisation file custom results
 
-=head1 Version
-
-0.16.$Rev: 1 $
-
 =head1 Synopsis
 
    use File::UnixAuth::Result;
@@ -57,9 +50,15 @@ File::UnixAuth::Result - Unix authentication and authorisation file custom resul
 
 =head2 add_user_to_group
 
+Adds a user to a group
+
 =head2 remove_user_from_group
 
+Removes a user from a group
+
 =head1 Diagnostics
+
+None
 
 =head1 Dependencies
 
@@ -85,7 +84,7 @@ Peter Flanigan, C<< <Support at RoxSoft.co.uk> >>
 
 =head1 License and Copyright
 
-Copyright (c) 2013 Peter Flanigan. All rights reserved
+Copyright (c) 2014 Peter Flanigan. All rights reserved
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself. See L<perlartistic>
