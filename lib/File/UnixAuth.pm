@@ -2,14 +2,16 @@ package File::UnixAuth;
 
 use 5.010001;
 use namespace::sweep;
-use version; our $VERSION = qv( sprintf '0.20.%d', q$Rev: 1 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.21.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 use Moo;
 use File::DataClass::Constants;
-use File::DataClass::Types  qw( Str );
+use File::DataClass::Types  qw( CodeRef Maybe Str );
 use File::UnixAuth::Result;
 
 extends q(File::DataClass::Schema);
+
+has 'post_update_hook'    => is => 'ro', isa => Maybe[CodeRef];
 
 has '+result_source_attributes' =>
    default                => sub { {
@@ -57,7 +59,7 @@ File::UnixAuth - Read and write the Unix authentication files
 
 =head1 Version
 
-Describes version 0.20.$Rev: 1 $ of L<File::UnixAuth>
+Describes version v0.21.$Rev: 1 $ of L<File::UnixAuth>
 
 =head1 Synopsis
 
@@ -80,6 +82,15 @@ sources; C<group>, C<passwd>, and C<shadow>
 Defines these attributes;
 
 =over 3
+
+=item C<post_update_hook>
+
+A code reference that is called after an update completes. Defaults to
+C<undef>. If set to:
+
+   sub { qx( 'grpconv' ) }
+
+then the file F</etc/gshadow> will be updated
 
 =item C<result_source_attributes>
 

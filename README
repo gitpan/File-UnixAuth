@@ -4,7 +4,7 @@ Name
 
 Version
 
-    Describes version 0.20.$Rev: 1 $ of File::UnixAuth
+    Describes version v0.21.$Rev: 1 $ of File::UnixAuth
 
 Synopsis
 
@@ -24,6 +24,15 @@ Description
 Configuration and Environment
 
     Defines these attributes;
+
+    post_update_hook
+
+      A code reference that is called after an update completes. Defaults
+      to undef. If set to:
+
+         sub { qx( 'grpconv' ) }
+
+      then the file /etc/gshadow will be updated
 
     result_source_attributes
 

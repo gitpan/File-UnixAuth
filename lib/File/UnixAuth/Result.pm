@@ -8,6 +8,14 @@ use File::DataClass::Functions qw( is_member );
 
 extends q(File::DataClass::Result);
 
+after 'update' => sub {
+   my $self = shift; my $hook = $self->_source->schema->post_update_hook;
+
+   $hook and $hook->( $self );
+
+   return;
+};
+
 sub add_user_to_group {
    my ($self, $user) = @_; my $users = $self->members;
 
@@ -47,6 +55,10 @@ File::UnixAuth::Result - Unix authentication and authorisation file custom resul
 =head1 Configuration and Environment
 
 =head1 Subroutines/Methods
+
+=head2 C<update>
+
+Modifies the C<update> method call. Calls the post update hook if defined
 
 =head2 add_user_to_group
 

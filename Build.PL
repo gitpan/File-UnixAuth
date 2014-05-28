@@ -18,7 +18,7 @@ my $prereqs  = {
   },
   'requires' => {
     'Class::Method::ModifiersX::Augment' => '0.001',
-    'File::DataClass' => 'v0.40.0',
+    'File::DataClass' => 'v0.41.0',
     'Lingua::EN::NameParse' => '1.28',
     'Moo' => '1.004002',
     'namespace::sweep' => '0.006',

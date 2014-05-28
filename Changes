@@ -1,5 +1,9 @@
 Revision history for File::UnixAuth
 
+0.21.1    2014-05-28 11:29:58
+          - Added post_update_hook callback to support /etc/gshadow
+            Closes RT#96026
+
 0.20.1    2014-05-27 19:29:19
           - Removed Ident and VERSION lines
           - Updated toolchain

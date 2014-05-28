@@ -67,6 +67,23 @@ $diff = diff catfile( qw( t passwd ) ), $dumped;
 
 ok !$diff, 'Passwd - load and dump roundtrips 2'; io( $dumped )->unlink;
 
+$args   = { path        => catfile( qw( t group ) ),
+            source_name => 'group',
+            tempdir     => 't' };
+$schema = File::UnixAuth->new( $args );
+
+my $rs  = $schema->resultset; my $res = $rs->find( 'audio' );
+
+is $res->members->[ 1 ], 'pjf', 'Finds group record';
+
+$res->remove_user_from_group( 'pjf' ); $res = $rs->find( 'audio' );
+
+is $res->members->[ 1 ], undef, 'Removes user from group';
+
+$res->add_user_to_group( 'pjf' ); $res = $rs->find( 'audio' );
+
+is $res->members->[ 1 ], 'pjf', 'Adds user to group';
+
 done_testing;
 
 # Cleanup
