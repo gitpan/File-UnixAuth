@@ -1,6 +1,6 @@
 package File::UnixAuth::Storage;
 
-use namespace::sweep;
+use namespace::autoclean;
 
 use Moo;
 use MooX::Augment -class;

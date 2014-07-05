@@ -24,22 +24,22 @@ no_index:
 provides:
   File::UnixAuth:
     file: lib/File/UnixAuth.pm
-    version: v0.21.1
+    version: v0.22.1
   File::UnixAuth::Result:
     file: lib/File/UnixAuth/Result.pm
-    version: v0.21.1
+    version: v0.22.1
   File::UnixAuth::Storage:
     file: lib/File/UnixAuth/Storage.pm
-    version: v0.21.1
+    version: v0.22.1
 requires:
   Class::Method::ModifiersX::Augment: '0.001'
   File::DataClass: v0.41.0
   Lingua::EN::NameParse: '1.28'
   Moo: '1.004002'
-  namespace::sweep: '0.006'
+  namespace::autoclean: '0.19'
   perl: '5.010001'
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=File-UnixAuth
   homepage: https://metacpan.org/author/PJFL
   license: http://dev.perl.org/licenses/
-version: 0.21.1
+version: 0.22.1

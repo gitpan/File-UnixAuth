@@ -1,6 +1,6 @@
 package File::UnixAuth::Result;
 
-use namespace::sweep;
+use namespace::autoclean;
 
 use Moo;
 use File::DataClass::Constants;
@@ -9,10 +9,12 @@ use File::DataClass::Functions qw( is_member );
 extends q(File::DataClass::Result);
 
 after 'update' => sub {
-   my $self = shift; my $hook = $self->_source->schema->post_update_hook;
+   my $self   = shift;
+   my $source = $self->can( 'result_source' )
+              ? $self->result_source : $self->_source;
+   my $hook   = $source->schema->post_update_hook;
 
    $hook and $hook->( $self );
-
    return;
 };
 
